@@ -26,12 +26,14 @@ If this software is being used on another system that is not the USG Nerf Turret
 
 1. Power on the Pi. 
 2. Connect a display to the HDMI outputs on the Pi. This is the only time headless operation of the turret is not possible.
+
 3. In the user's home directory, extract the file named `server.tar.gz` we gave to Dr. Tiglao on Google Classroom into a directory of any name, or alternatively, run:
 
 
 ```
 pi@raspberrypi:~ $ git clone https://github.com/yearbook-milk/usgnerfwars -b "usg-configuration"
 ```
+4a. We wrote in Python 3.9, so ideally the Python on the Pi should be >=3.9.0, but older versions down to Python 3 should be OK.
 4. Use any text editor to open `config.py`. You should have downloaded the right version which has all the settings already set up for our system, but if not, here are the important settings to verify:
 
 * `TCP_PORT` should be set to a port (where port > `1024`). This is the one you will use to initiate a connection with the Pi in wireless mode.
