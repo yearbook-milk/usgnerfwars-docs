@@ -33,7 +33,7 @@ If this software is being used on another system that is not the USG Nerf Turret
 ```
 pi@raspberrypi:~ $ git clone https://github.com/yearbook-milk/usgnerfwars -b "usg-configuration"
 ```
-4a. We wrote in Python 3.9, so ideally the Python on the Pi should be >=3.9.0, but older versions down to Python 3 should be OK.
+4a. We wrote in Python 3.9, so ideally the Python on the Pi should be >=3.9.0, but older versions down to Python 3 should be OK. \ 
 4. Use any text editor to open `config.py`. You should have downloaded the right version which has all the settings already set up for our system, but if not, here are the important settings to verify:
 
 * `TCP_PORT` should be set to a port (where port > `1024`). This is the one you will use to initiate a connection with the Pi in wireless mode.
