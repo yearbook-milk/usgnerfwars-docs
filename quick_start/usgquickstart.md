@@ -75,7 +75,7 @@ C:\Users\C.Hu> py -m pip install opencv-python
 6. The client will then start its GUI. 
 * To control the servos manually, use the trackpad in the top left. If 
 * To lock onto a target, look at their bounding box and note what # is next to the box.
-* Hit that corresponding yellow button on the right to start tracking the target (if your target was highlighted in blue and it said `detection #1`, then hit the button labeled `1`. The servos should automatically start working to track them.
+* Hit that corresponding yellow button on the right to start tracking the target (if your target was highlighted in blue and it said `detection #1`, then hit the button labeled `1`. The servos should automatically start working to track them).
 	* If you're only seeing one detection when there should be multiple, hit the LargestPolygonOnly button once.
 * To rev and fire, use Rev and Fire Auto. Allow the blaster to rev up for 1-2 seconds before firing, and shut both off as soon as you're done. Do NOT let the pusher in the gun run for more than 3-4 seconds and do NOT rev the gun for more than 4-5 seconds.
 	* Note that shutting the flywheel motors off also disables the pusher motor.
