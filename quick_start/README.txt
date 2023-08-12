@@ -1,0 +1,1 @@
+This folder is here specifically for USG staff to be able to set up the Nerf Turret in its current configuration.
