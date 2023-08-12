@@ -1,6 +1,7 @@
+
 # Quick Start Guide for USG
 
-Hello Universities at Shady Grove faculty! If you are looking to wire and start up the Nerf Turret in its current configuration, this is the correct file.
+Hello UMD faculty! If you are looking to wire and start up the Nerf Turret in its current configuration, this is the correct file.
 
 If this software is being used on another system that is not the USG Nerf Turret, or you want to run in non-headless mode, or you want docs about the extended functionality of this software, this is not the right file.
 
@@ -53,6 +54,45 @@ pi@raspberrypi:~ $ pip install opencv-contrib-python
 ```
 * You NEED opencv-contrib, ideally 4.8.0. 
 
+6. Set up the computer vision pipeline. 
+	1. Open the directory `computervision`
+	2. Open `tracker.txt`, and set it to use the pre-programmed KCF tracker:
+	```
+	[cvbuiltin_kcf_tracker]
+	```	
+	3. Open `detectorfilterdata.txt`, and configure the detector as such (you change the colors in colorMasksGenerator to whatever color you want to target, we have ```red green yellow light_blue orange dark_pink pink cyan dark_blue```:
+
+	```
+	{
+    "color_detect": {
+        "colormasks": color_detect.colorMasksGenerator("red orange yellow"),
+        "other_parameters": {
+            "lower_hue_tolerance": 15,
+            "upper_hue_tolerance": 15,
+            "min_hsv_saturation": 20,
+            "min_hsv_value": 150,
+            "blur_level": 25,
+            "minPolygonWidth": 70,
+            "minPolygonHeight": 70,
+            "maxPolygonWidth": 1200,
+            "maxPolygonHeight": 2400,
+        },
+    }
+
+    "aruco_marker_detect": {
+        
+    }
+
+}
+
+	
+4. Open `detectorpipeline.txt` and set it to use color-based target candidate detection:
+```
+[color_detect]
+```
+
+
+
 
 ### How to actually use
 In order to use this system in headless mode, you'll need another computer with the client software installed. If you haven't already, you also need to start the `pigpio` daemon on the Pi by using `sudo pigpiod`.
@@ -81,3 +121,4 @@ C:\Users\C.Hu> py -m pip install opencv-python
 	* Note that shutting the flywheel motors off also disables the pusher motor.
 * To stop tracking, use Stop Tracking.
 * To disconnect, use Graceful D/C.
+7. Grab a chest-size object that's one of the colors you set in `detectorfilterdata.txt` and try the tracking.
