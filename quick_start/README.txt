@@ -8,4 +8,5 @@ CVInterface.md: the API used to connect pre-existing or homemade detection and t
 
 ProtoSpec.md: a basic specification of the protocol built on top of TCP/IP and UDP that the Nerf Turret software uses.
 
-MainConfigFile.md: what all the settings in the main config file do and when you should and shouldn't change them.
+
+For information about what all the settings in config.py do, look at the comments in config.py
