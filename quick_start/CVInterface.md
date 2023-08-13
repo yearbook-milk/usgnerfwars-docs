@@ -7,7 +7,7 @@ In this tutorial, we will write our own detection "algorithm", and have it be us
 ### Basics
 Let's first start with detection: the point of a detector here is to look at a frame, and return an array containing bounding boxes of ALL potential targets in frame. In this case however, let's just generate a bunch of random detections without actually detecting anything in the image. If we put this code in a file named `random_detect.py`:
 
-```
+```python
 import cv2
 from random import randint
 
@@ -41,7 +41,7 @@ If you then go to `detectorpipeline.txt` and set the contents to `[random_detect
 ### Reading from a config file
 Now let's say our pretend detection algorithm needs to pull detection parameters from a config file, in this case how many random boxes to spit out. We would first modify our config file by adding the section at the bottom (random_detect):
 
-```
+```python
 {
     "color_detect": {
         "colormasks": color_detect.colorMasksGenerator("red orange yellow"),
@@ -71,7 +71,7 @@ Now let's say our pretend detection algorithm needs to pull detection parameters
 
 
 Then, we would modify our `random_detect.py` code like this:
-```
+```python
 from random import randint
 
 # set a globalvar to hold a copy of the settings passed to _init()
@@ -111,7 +111,7 @@ We:
 ## Connecting tracking algs. to the main prog.
 Now that we have successfully created and integrated our own "detection" algorithm, and used it to generate crap detections, we can now move onto seeing how the tracking algs. are connected to the main program. It works mostly the same way; see this already existing simple code that just works as a layer between OpenCV's already existing tracker_KCF and our `main.py`:
 
-```
+```python
 import cv2
 import numpy as np
 
@@ -147,7 +147,7 @@ def _update(frame):
 
 Let's see how an alg. tracking a particular ID Aruco marker was implemented:
 
-```
+```python
 import cv2
 import numpy as np
 import helpers

@@ -50,7 +50,7 @@ pi@raspberrypi:~ $ git clone https://github.com/yearbook-milk/usgnerfwars -b "us
 
 5. If you didn't install dependencies yet (i.e. you're using another Pi that our team never touched), you'll have to run the following:
 
-```
+```shell
 pi@raspberrypi:~ $ pip install numpy
 pi@raspberrypi:~ $ pip install opencv-contrib-python
 ```
@@ -59,12 +59,12 @@ pi@raspberrypi:~ $ pip install opencv-contrib-python
 6. Set up the computer vision pipeline. 
 	1. Open the directory `computervision`
 	2. Open `tracker.txt`, and set it to use the pre-programmed KCF tracker:
-	```
+	```python
 	[cvbuiltin_kcf_tracker]
 	```	
 	3. Open `detectorfilterdata.txt`, and configure the detector as such (you change the colors in colorMasksGenerator to whatever color you want to target, we have ```red green yellow light_blue orange dark_pink pink cyan dark_blue```:
 
-	```
+	```python
 	{
     "color_detect": {
         "colormasks": color_detect.colorMasksGenerator("red orange yellow"),
@@ -89,7 +89,7 @@ pi@raspberrypi:~ $ pip install opencv-contrib-python
 
 	
 4. Open `detectorpipeline.txt` and set it to use color-based target candidate detection:
-```
+```python
 [color_detect]
 ```
 
@@ -104,11 +104,11 @@ For more information about the client we wrote during the project, go to (PUT GH
 To just test it out:
 1. Get another computer.
 2. Run
-```
+```powershell
 C:\Users\C.Hu> git clone https://github.com/yearbook-milk/usgnerfwars-remotecontroller/ -b "usg-configuration"
 ```
 3. We never released any OS specific executables for our client. Because of this, your other computer needs Python, as well as dependencies:
-```
+```powershell
 C:\Users\C.Hu> py -m pip install numpy
 C:\Users\C.Hu> py -m pip install opencv-python
 ```
