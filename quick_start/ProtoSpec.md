@@ -44,4 +44,4 @@ The list of all commands that the client can send to the server over either sock
 #### Notes:
 * If the server is unable to execute a command that the client sends it, it should simply ignore it. 
 * There is currently no specified reconnection logic for either the client or the server. 
-* A default wrapper implementing this protocol is documented in (LINK HERE) and is in use here and here (LINKS HERE)
+* A default wrapper implementing this protocol is in use [on the server/turret side](https://github.com/yearbook-milk/usgnerfwars/blob/main/net/server/remote.py) and on the [client side](https://github.com/yearbook-milk/usgnerfwars-remotecontroller/blob/main/remote.py).
