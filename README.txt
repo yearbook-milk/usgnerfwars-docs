@@ -1,9 +1,1 @@
-Docs repo for the USG Nerf Drone's software and networking protocol, which controls aspects such as auto-follow, remote video feed, remote control, etc.
-
-In this repo you'll find information about:
-
-* How to set up this software on an embedded system such as the Raspberry Pi
-* What all the settings do
-* The logic behind the computer vision and networking systems
-* The networking protocol specification (for people looking to create alternate remote control clients and whatnot)
-* The API used to add different tracking and detection algorithms
+If you look at the old README in commit history, that was all lies. I don't have time to extensively document this project (exams and other stuff like that), and all USG wants is to be able to start up and configure our project, so I've just placed some quick tutorials in quick_start. Perhaps one day the actual inner workings and interfaces of the project will be documented, but not today.
