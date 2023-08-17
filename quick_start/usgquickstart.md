@@ -124,3 +124,6 @@ C:\Users\C.Hu> py -m pip install opencv-python
 * To stop tracking, use Stop Tracking.
 * To disconnect, use Graceful D/C.
 7. Grab a chest-size object that's one of the colors you set in `detectorfilterdata.txt` and try the tracking.
+
+
+If you have problems with the detection, try fiddling with the numbers in detectorfilterdata.txt. The comments in the file have some helpful hints. We recently also just fixed an issue where we had some of the startup steps was backwards, resulting in detector initializations failing, so if you're getting nothing, check to make sure you don't have outdated software.
